@@ -1,0 +1,262 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      body{
+            margin: 0;
+      }
+      .header{
+        background:#333;
+      }
+      .left{
+          float:left;
+      }
+
+          .container{
+              width: 1226px;
+              margin: 0 auto;
+
+
+          }
+
+      .header .menu{
+          float: left;
+          color: white;
+      }
+      .header .menu a:hover{
+            color: #ff6700;
+        }
+      .header .account{
+          float: right;
+          color: white;
+      }
+      .header a{
+          color: #b0b0b0;
+          line-height: 40px;
+          display: inline-block;
+          font-size: 12px;
+          margin-right:10px;
+      }
+      .sub-header{
+            height: 100px;
+
+        }
+        .sub-header .ht{
+            height: 100px;
+
+        }
+        .sub-header .logo{
+            width: 234px;
+
+            height:100px;
+            float: left;
+        }
+        .sub-header .logo a{
+        margin-top: 22px;
+            display: inline-block;
+        }
+        .sub-header .logo a img{
+        height: 56px;
+            width: 56px;
+        }
+        .sub-header .menu-list{
+            float: left;
+             height:100px;
+            line-height:100px;
+        }
+        .sub-header .menu-list a{
+            padding:0 20px;
+            display: inline-block;
+                color: #333;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .sub-header .menu-list a:hover{
+            color: #ff6700;
+
+        }
+
+
+        .sub-header .search{
+            float: right;
+             height:100px;
+        }
+        .slider{
+            position: relative;
+            overflow: hidden;
+            width: 1226px;
+            margin: 0 auto;
+        }
+        .slider .loop_container{
+           left: 0; top: 0;
+            width: 1226px;
+            margin: 0 auto;
+            width: 200%; /* 横向排列 5张图片 宽度应为主容器5倍 */
+            height: 100%;
+            transform: translate(0,0); /* 初始位置位移 */
+            animation: loop 10s linear infinite;
+
+        }
+        @keyframes loop {
+            0% {transform: translate(0,0);}
+    40% {transform: translate(0,0);} /* 停留1500ms */
+
+    50% {transform: translate(-50%,0);} /* 切换500ms 位移-20% */
+    90% {transform: translate(-50%,0);}
+            100% {transform: translate(0,0);}
+}
+        .slider .sd-img {
+            width: 1226px;
+            height: 460px;
+        }
+        .slider .sd-img img{
+            width: 100%;
+            height: 100%;
+        }
+        .news{
+            margin-top:14px;
+        }
+        .news .channel{
+            width:228px;
+            height:164px;
+
+            padding:3px;
+                background-color:#5f5750;
+
+        }
+        .news .list_item{
+            width:316px;
+            height:170px;
+            margin-left:14.66px;
+        }
+        .news .list_item img{
+              width: 100%;
+            height: 100%;
+        }
+
+        .news .channel .item{
+            height: 48.2%;
+            height:82px;
+
+            width:76px;
+            float:left;
+            text-align:center;
+        }
+        .news .channel .item a{
+            display:inline-block;
+            font-size:12px;
+            padding-top:18px;
+            color:#fff;
+            text-decoration:none;
+            opacity:.7;
+        }
+        .news .channel .item a:hover{
+            opacity:1;
+        }
+        .news .channel .item img{
+            width:24px;
+            height:24px;
+            margin:0 auto;
+            margin-bottom: 4px;
+            display:block;
+        }
+    </style>
+</head>
+<body>
+  <div class="header">
+      <div class="header">
+          <div class="container">
+          <div class="menu">
+              <a>小凯商城</a>
+              <a>KAIUI</a>
+              <a>KAI服务</a>
+              <a>没品</a>
+              <a>封闭平台</a>
+          </div>
+          <div class="account">
+              <a>登录</a>
+              <a>注册</a>
+              <a>消息通知</a>
+          </div>
+          <div style="clear: both"></div>
+
+          </div>
+          </div>
+  </div>
+    <div class = "sub-header">
+        <div class = "container">
+            <div class = "ht logo">
+                <a href="https://www.mi.com/shop" >
+                    <img src="image/logo_kai.png" >
+                </a>
+            </div>
+            <div class = "ht menu-list">
+                <a href="https://www.mi.com/shop">xiaomi手机</a>
+                <a href="https://www.mi.com/shop">Redmi红米</a>
+                <a href="https://www.mi.com/shop">电视</a>
+                <a href="https://www.mi.com/shop">笔记本</a>
+
+                <a href="https://www.mi.com/shop">平板</a>
+
+
+            </div>
+
+            <div class = "ht search">虚假的搜索框</div>
+            <div style="clear: both"></div>
+        </div>
+
+    </div>
+<div class="slider">
+    <div class="loop_container">
+
+        <img src="image/slider/2.png" alt="sdf" class="sd-img left">
+        <img src="image/slider/123.png" alt="sdf" class="sd-img left">
+        <div class="clear:both"></div>
+
+    </div>
+</div>
+<div class="news">
+    <div class="container">
+        <div class="channel left">
+            <div class="item">
+                <a href="https://www.mi.com/shop">
+                    <img src="image/channel/1.png" alt="">
+                    <span>假一赔十</span>
+                </a>
+            </div>
+            <div class="item"><a href="https://www.mi.com/shop">
+                    <img src="image/channel/1.png" alt="">
+                    <span>AAA级保障</span>
+                </a></div>
+            <div class="item"><a href="https://www.mi.com/shop">
+                    <img src="image/channel/1.png" alt="">
+                    <span>百亿补贴认证</span>
+                </a></div>
+            <div class="item"><a href="https://www.mi.com/shop">
+                    <img src="image/channel/1.png" alt="">
+                    <span>凯粉专属</span>
+                </a></div>
+            <div class="item"><a href="https://www.mi.com/shop">
+                    <img src="image/channel/1.png" alt="">
+                    <span>不支持售后</span>
+                </a></div>
+            <div class="item"><a href="https://www.mi.com/shop">
+                    <img src="image/channel/1.png" alt="">
+                    <span>不支持七天无理由退货</span>
+                </a></div>
+            <div class="clear:both"></div>
+        </div>
+        <div class="list_item left">
+            <img src="image/list_item1.png" /></div>
+        <div class="list_item left">
+            <img src="image/list_item2.png" /></div>
+        <div class="list_item left">
+            <img src="image/list_item3.png" /></div>
+        <div class="clear:both"></div>
+    </div>
+</div>
+</body>
+</html>
