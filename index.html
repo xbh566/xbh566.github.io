@@ -94,19 +94,24 @@
            left: 0; top: 0;
             width: 1226px;
             margin: 0 auto;
-            width: 200%; /* 横向排列 5张图片 宽度应为主容器5倍 */
+            width: 400%; /* 横向排列 5张图片 宽度应为主容器5倍 */
             height: 100%;
             transform: translate(0,0); /* 初始位置位移 */
-            animation: loop 10s linear infinite;
+            animation: loop 16s linear infinite;
 
         }
         @keyframes loop {
             0% {transform: translate(0,0);}
-    40% {transform: translate(0,0);} /* 停留1500ms */
+    18.75% {transform: translate(-0%,0);} /* 停留1500ms */
 
-    50% {transform: translate(-50%,0);} /* 切换500ms 位移-20% */
-    90% {transform: translate(-50%,0);}
-            100% {transform: translate(0,0);}
+    25% {transform: translate(-25%,0);} /* 切换500ms 位移-20% */
+    43.75% {transform: translate(-25%,0);}
+            50% {transform: translate(-50%,0);} /* 切换500ms 位移-20% */
+    68.75% {transform: translate(-50%,0);}
+            75% {transform: translate(-75%,0);} /* 切换500ms 位移-20% */
+    93.75% {transform: translate(-75%,0);}
+
+           100% {transform: translate(0,0);}
 }
         .slider .sd-img {
             width: 1226px;
@@ -163,9 +168,73 @@
             margin-bottom: 4px;
             display:block;
         }
+        .fixed{
+            position:fixed;
+    display: block;
+    width: 82px;
+    height: 90px;
+    margin-top: -1px;
+    background-color: #fff;
+    border: 1px solid #f5f5f5;
+    text-align: center;
+            bottom:100px;
+            right:10px;
+            z-index: 998;
+        }
+        .dialog{
+            position:fixed;
+            height:300px;
+            width:500px;
+            background-color: #ff6700;
+            left:0px;
+            right:0;
+            margin:0 auto;
+            bottom:500px;
+        z-index: 1000;}
+        .mask{
+            background-color: black;
+            position:fixed;
+            top:0;
+            bottom:0;
+            right:0;
+            left:0;
+            opacity:0.7;
+            z-index:999;
+        }
+        .birth{
+            position: relative;
+        }
+        .birth .download{
+
+            top:80px;
+            display:none;
+            z-index:1500;
+            position: absolute;
+        }
+        .birth .download img{
+             width:90px;
+            height:90px;
+        }
+        .birth:hover .download{
+            display:block;
+        }
     </style>
+    <script type="text/javascript">
+       loopy()
+       function loopy() {
+       var sWord =""
+       while (sWord != "214") {//设置密码
+       sWord = prompt("输入正确密码才能登陆!")
+       }
+
+}
+
+       </script>
 </head>
 <body>
+    <div class="fixed">test</div>
+
+
   <div class="header">
       <div class="header">
           <div class="container">
@@ -174,7 +243,9 @@
               <a>KAIUI</a>
               <a>KAI服务</a>
               <a>没品</a>
-              <a>封闭平台</a>
+              <a style="position: relative">封闭平台
+              </a>
+
           </div>
           <div class="account">
               <a>登录</a>
@@ -198,8 +269,11 @@
                 <a href="https://www.mi.com/shop">Redmi红米</a>
                 <a href="https://www.mi.com/shop">电视</a>
                 <a href="https://www.mi.com/shop">笔记本</a>
-
-                <a href="https://www.mi.com/shop">平板</a>
+                <a href="https://www.mi.com/shop" class="birth">生日福利
+                 <div  class="download">
+                <img src="image/sub_header/birth.jpg"  >
+                  </div>
+                </a>
 
 
             </div>
@@ -214,6 +288,8 @@
 
         <img src="image/slider/2.png" alt="sdf" class="sd-img left">
         <img src="image/slider/123.png" alt="sdf" class="sd-img left">
+        <img src="image/slider/3.png" alt="sdf" class="sd-img left">
+        <img src="image/slider/4.png" alt="sdf" class="sd-img left">
         <div class="clear:both"></div>
 
     </div>
